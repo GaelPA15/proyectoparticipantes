@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de participantes</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Participantes</h1>
+    <a href="/participants/new" class="btn">Agregar participante</a>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Universidad</th>
+                <th>Categoría</th>
+                <th>Registrado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="participant : ${participants}">
+                <td th:text="${participant.fullName}">Nombre</td>
+                <td th:text="${participant.email}">Email</td>
+                <td th:text="${participant.university}">Universidad</td>
+                <td th:text="${participant.category}">Categoría</td>
+                <td th:text="${#temporals.format(participant.registrationDate, 'dd/MM/yyyy HH:mm')}">Fecha</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

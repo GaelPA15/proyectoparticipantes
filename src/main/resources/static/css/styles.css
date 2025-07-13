@@ -1,0 +1,165 @@
+/* Variables de diseño elegante */
+:root {
+  --primary: #2c3e50;
+  --primary-dark: #1a252f;
+  --secondary: #7f8c8d;
+  --accent: #bdc3c7;
+  --text: #333333;
+  --text-light: #7f8c8d;
+  --bg: #f5f7fa;
+  --white: #ffffff;
+  --border: #e0e0e0;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --transition: all 0.25s ease-in-out;
+}
+
+/* Reset suave */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', 'Times New Roman', serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  padding: 3rem 2rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Contenedor principal con restricción de ancho */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezado elegante */
+.header {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--primary);
+}
+
+/* Botón formal */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Tabla elegante */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 3rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  background-color: var(--white);
+}
+
+thead {
+  background-color: var(--primary);
+}
+
+th {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  color: var(--white);
+  font-weight: 400;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+tr:not(:last-child) td {
+  border-bottom: 1px solid var(--border);
+}
+
+tr:hover td {
+  background-color: rgba(189, 195, 199, 0.1);
+}
+
+/* Efectos sutiles */
+.table-wrapper {
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.table-wrapper:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Detalles de diseño fino */
+td {
+  position: relative;
+}
+
+td:first-child {
+  font-weight: 500;
+}
